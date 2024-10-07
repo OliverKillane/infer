@@ -217,7 +217,7 @@ if [ "$USE_NINJA" = "yes" ]; then
 else
     CMAKE_GENERATOR="Unix Makefiles"
     BUILD_BIN="make"
-    BUILD_ARGS="-j $JOBS"
+    BUILD_ARGS="-j 1" # Avoid using many jobs to reduce memory usage
 fi
 
 if [ "$SEQUENTIAL_LINK" = "yes" ]; then
